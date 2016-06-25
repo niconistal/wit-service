@@ -37,9 +37,10 @@ const client = new Wit(token, actions);
 
 // Create a server with a host and port
 const server = new Hapi.Server();
+var port = parseInt(process.env.PORT) || 5000;
 server.connection({
     host: 'localhost',
-    port: 8000
+    port: port
 });
 
 
